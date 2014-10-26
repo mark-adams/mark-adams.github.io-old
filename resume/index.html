@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="resumeApp" ng-controller="MainResumeCtrl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">        <title>{{resume.personal.name}} Resume</title>
+
+        <!-- Bootstrap -->
+        <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro|Roboto+Slab:400,700" rel="stylesheet">
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <header class="row text-right">
+                <div class="col-xs-12">
+                    <h1>{{resume.personal.name}} <small>software developer</small></h1>
+                </div>
+                <div class="col-xs-12">
+                    <address>
+                        <a href="mailto:{{resume.personal.email}}">{{resume.personal.email}}</a> |
+                        <a href="tel:{{resume.personal.phone}}">{{resume.personal.phone}}</a> |
+                        <a href="https://twitter.com/{{resume.personal.twitter}}">@{{resume.personal.twitter}}</a>
+                    </address>
+                </div>
+            </header>
+            <div class="row">
+                <div class="col-xs-12"><h2>Education</h2></div>
+                <div class="row degree" ng-repeat="degree in resume.education">
+                    <div class=" col-md-offset-2 col-xs-3 col-md-1 text-right dt">
+                        {{degree.grad_dt}}
+                    </div>
+                    <div class="col-xs-9 col-md-6">
+                        <div><strong class="focus">{{degree.degree}}</strong><div class="honors"><em>{{degree.honors}}</em></div></div>
+                        <div><a href="{{degree.website}}">{{degree.school}}, {{degree.location}}</a></div>
+                    </div>
+                    <div class="col-xs-2 hidden-xs hidden-print">
+                        <a href="{{degree.website}}">
+                            <img class="logo img-responsive" src="{{degree.logo}}" alt="{{degree.school}}" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12"><h2>Work</h2></div>
+                <div class="row job-row" ng-repeat="job in resume.work">
+                    <div class="row">
+                        <div class="col-md-offset-1 col-xs-3 col-md-2 text-right dt">
+                            {{ job.start_dt }} - {{ job.end_dt }}
+                        </div>
+                        <div class="col-xs-9 col-md-6">
+                            <div><strong class="focus">{{job.position}}</strong></div>
+                            <div><a href="{{job.website}}">{{job.company}}, {{job.location}}</a></div>
+                            <div class="job-desc" ng-if="job.description">
+                                {{job.description}}
+                            </div>
+                            <div ng-repeat="tech in job.technologies" class="tech-badge inline">
+                                <span class="badge" title="{{tech.name}}">{{tech.tag}}</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-2 hidden-xs hidden-print">
+                            <a href="{{job.website}}">
+                                <img class="logo img-responsive" src="{{job.logo}}" alt="{{job.company}}" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row other-interests">
+                <div class="col-xs-12 text-center"><h2>Other Interests &amp; Skills</h2></div>
+                <div>
+                    <div class="col-xs-offset-2 col-xs-8 col-md-offset-3 col-md-6 text-center">
+                        <div ng-repeat="interest in resume.other_interests" class="tech-badge inline">
+                            <span class="badge" title="{{interest}}">{{interest}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+        <script src="js/controllers.js"></script>
+    </body>
+</html>

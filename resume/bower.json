@@ -1,0 +1,22 @@
+{
+  "name": "resume",
+  "version": "0.0.0",
+  "authors": [
+    "Mark Adams <mark@markadams.me>"
+  ],
+  "description": "An application for my resume",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://markadams.me/resume",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.2.0"
+  }
+}

@@ -1,0 +1,119 @@
+{
+    "personal": {
+        "name": "Mark Adams",
+        "email": "mark@markadams.me",
+        "phone": "972.755.1603",
+        "twitter": "markadams"
+    },
+    "education":
+        [
+            {
+                "grad_dt": 2014,
+                "school": "The University of Texas at Dallas",
+                "location": "Richardson, TX",
+                "degree": "M.S. in Computer Science",
+                "logo": "images/utd.png",
+                "website": "http://www.utdallas.edu",
+                "gpa": 3.723
+            },
+            {
+                "grad_dt": 2010,
+                "school": "The University of Illinois at Springfield",
+                "location": "Springfied, IL",
+                "degree": "B.S. in Computer Science",
+                "logo": "images/uis.png",
+                "website": "http://www.uis.edu",
+                "honors": "summa cum laude",
+                "gpa": 4.000
+            }
+        ],
+    "work":
+        [
+            {
+                "start_dt": 2011,
+                "end_dt": "now",
+                "position": "Software Engineer",
+                "company": "SimpleLTC Systems, Inc.",
+                "location": "Richardson, TX",
+                "website": "http://www.simpleltc.com",
+                "logo": "images/simpleltc.png",
+                "description": "Helped lead a small agile team in maintaining and developing the company's core SaaS product suite, working primarily in Python, C#, and Javascript. Work included coordinating the team's sprints and working directly with customers to develop new functionality. Also designed and developed the company's REST API for secure exchange of health information with third-party partners.",
+                "projects":
+                    [
+                        "REST API for third-party integrations",
+                        "Data warehouse to support clinical / financial anaylysis product",
+                        "Automated application build, test, and deployment processes"
+                    ],
+                "technologies":
+                    [
+                        {"name": "Python", "tag": "python"},
+                        {"name": "C#", "tag": "csharp"},
+                        {"name": "Javascript", "tag": "js"},
+                        {"name": "Git", "tag": "git"},
+                        {"name": "Testing", "tag": "testing"},
+                        {"name": "MySQL", "tag": "mysql"},
+                        {"name": "Docker", "tag": "docker"},
+                        {"name": "MongoDB", "tag": "mongo-db"},
+                        {"name": "Microsoft SQL Server", "tag": "mssql"}
+                    ]
+            },
+            {
+                "start_dt": 2007,
+                "end_dt": 2011,
+                "position": "Web Application Developer",
+                "company": "Dallas Baptist University",
+                "location": "Dallas, TX",
+                "website": "http://www.dbu.edu",
+                "logo": "images/dbu.png",
+                "description": "Developed and maintained a wide variety of web applications written in PHP, ASP.NET, and Classic ASP using MSSQL and MySQL data stores. Worked collaboratively with groups throughout the organization to define problems and create effective web-based solutions.",
+                "projects": [
+                    "Event Registration & Management Portal (PHP)",
+                    "IT Department Internal Messaging Application (PHP)",
+                    "Emergency Mass Alert System (ASP.NET, C#)",
+                    "Employee Wellness Tracker (ASP.NET, C#, GWT)",
+                    "Online Admissions Application (Classic ASP)",
+                    "Event Registration & Management Portal (PHP)"
+                ],
+                "technologies":
+                    [
+                        {"name": "PHP", "tag": "php"},
+                        {"name": "MySQL", "tag": "mysql"},
+                        {"name": "Javascript", "tag": "js"},
+                        {"name": "C#", "tag": "csharp"},
+                        {"name": "Microsoft SQL Server", "tag": "mssql"},
+                        {"name": "Classic ASP", "tag": "classic-asp"}
+                    ]
+            },
+            {
+                "start_dt": 2005,
+                "end_dt": 2006,
+                "position": "Developer / Technical Support",
+                "company": "Computer Techniques, Inc.",
+                "location": "Taylorville, IL",
+                "website": "http://www.cticomputers.com",
+                "logo": "images/cti.png",
+                "description": "Managed the company's OEM system building process and developed web and server applications to support the company's remote backup product. Also provided support to CTI Internet customers.",
+                "projects":[
+                    "Inventory Management System (C#)",
+                    "OEM Preinstallation Automation Server / Client (ASP.NET, C#)",
+                    "Billing & Account Management System for CTI Remote Backup Service (ASP.NET, C#)"
+                ],
+                "technologies":
+                [
+                    {"name": "C#", "tag": "csharp"},
+                    {"name": "Microsoft SQL Server", "tag": "mssql"}
+                ]
+            }
+        ],
+    "profiles":
+        [
+            {"name": "Bitbucket", "logo": null, "url": "https://bitbucket.org/markadams/"},
+            {"name": "LinkedIn", "logo": null, "url": "https://www.linkedin.com/in/markladams/"},
+            {"name": "Twitter", "logo": null, "url": "https://twitter.com/markadams"},
+            {"name": "Keybase.io", "logo": null, "url": "https://keybase.io/kramsmada"}
+        ],
+    "other_interests":
+        [
+            "Java", "Cryptography", "Machine Learning", "Android", "Information Security", "HTML / CSS", "C / C++", "Linux", "Nginx / Apache", "Advocacy"
+        ]
+}

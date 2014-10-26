@@ -1,0 +1,179 @@
+html {
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+    /*background: -moz-linear-gradient(top,white,white 300px,#DFDFFF);*/
+}
+body {
+    font-size: 100%;
+    line-height: 1.125em;
+    margin: 150px 10px 10px 10px;
+
+}
+
+ul{
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+#header{
+
+   margin-left: auto;
+   margin-right: auto;
+   width: 400px;
+   text-align: center;
+   font-size: 1.3em;
+   line-height: 1.3em;
+
+}
+
+.s1{
+    text-shadow: 3px 3px 4px #CCC;
+}
+
+p {
+    font-size: 0.875em;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 2em;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+#content {
+    max-width: 1000px;
+    margin: 30px auto 30px auto;
+}
+
+#header{
+    position: relative;
+    top: -500px;
+    -webkit-transition: top 2s ease-in-out;
+    -moz-transition: top 2s ease-in-out;
+    -o-transition: top 2s ease-in-out;
+    margin-bottom: 10px;
+}
+
+#things{
+    width: 500px;
+    margin-top: 100px;
+    opacity: 0;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+#things li{
+  margin: 5px 0px;
+}
+
+#header.inPlace{
+    top: 0;
+}
+
+#things.inPlace{
+    margin-top: 20px;
+    opacity: 1;
+}
+
+
+.contact_info > div {
+    display: inline;
+    margin-left: 25px;
+    font-size: .9em;
+}
+
+.contact_info {
+    text-align: right;
+}
+
+.subheading {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.devTypes {
+    color:#999
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #009;
+    text-decoration: underline;
+}
+
+
+
+.c{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cText{
+    text-align: center;
+}
+
+.horList{
+    margin-bottom: 15px;
+}
+
+.horList > li{
+   display: inline;
+   margin: auto 5px;
+}
+
+.hidden{
+    color: white;
+}
+
+.hidden:hover{
+    color: white;
+}
+
+lk{
+    color: black;
+}
+
+#connections > li > a:before{
+    content: "@";
+}
+
+#consoleCanvas{
+    width: 600px;
+    height: 600px;
+}
+
+li.breakItem{
+  display: block;
+}
+
+@media print {
+    body {
+        font-size: .8em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #content {
+        margin-top: 0;
+    }
+
+    #logos > img {
+        margin-left: 15px;
+        width: 100px;
+        height: 65px;
+    }
+}
