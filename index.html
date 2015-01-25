@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,6 +16,13 @@
 				<h1>Mark Adams</h1>
 				<p class="subheading"><span class="devTypes">software | web</span> developer</p>
 			</div>
+			<nav>
+				<ul class="horList c cText">
+					{% for item in site.data.menu %}
+					<li><a href="{{ item.link }}"><img src="{{ item.icon }}" title="{{ item.title }}" /></a></li>
+					{% endfor %}
+				</ul>
+			</nav>
 			<ul id="things" class="horList c cText">
 				<li><a href="/resume/">[ <span class="lk">Resume</span> ]</a></li>
 				<li>.</li>
@@ -22,6 +31,17 @@
 				<li><a href="https://bitbucket.org/markadams">[ <span class="lk">Bitbucket</span> ]</a></li>
 				<li class="breakItem"><a href="https://keybase.io/kramsmada">[ <span class="lk">GPG: 0xC7A05E3FC972098C</span> ]</a></li>
 			</ul>
+
+			<h2>Recent posts...</h2>
+			<ul class="c">
+				{% for post in site.posts limit:5 %}
+				<li>
+					<a href="{{ post.url }}">{{ post.date | date: "%Y.%m.%d" }} .. {{ post.title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+
+
 		</div>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

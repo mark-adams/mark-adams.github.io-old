@@ -177,3 +177,7 @@ li.breakItem{
         height: 65px;
     }
 }
+
+nav ul li {
+    display: inline;
+}
