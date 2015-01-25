@@ -30,10 +30,32 @@
     "work":
         [
             {
-                "start_dt": 2011,
+                "start_dt": 2015,
                 "end_dt": "now",
+                "position": "Developer",
+                "company": "Atlassian",
+                "location": "Austin, TX",
+                "website": "http://www.atlassian.com",
+                "logo": "images/atlassian.png",
+                "description": "Worked on the Bitbucket team helping to build, optimize, and test new features and systems.",
+                "projects":
+                [
+                ],
+                "technologies":
+                [
+                    {"name": "Python", "tag": "python"},
+                    {"name": "Django", "tag": "django"},
+                    {"name": "Celery", "tag": "celery"},
+                    {"name": "Git", "tag": "git"},
+                    {"name": "Testing", "tag": "testing"},
+                    {"name": "PostgreSQL", "tag": "postgres"}
+                ]
+            },
+            {
+                "start_dt": 2011,
+                "end_dt": 2014,
                 "position": "Software Engineer",
-                "company": "SimpleLTC Systems, Inc.",
+                "company": "SimpleLTC Systems",
                 "location": "Richardson, TX",
                 "website": "http://www.simpleltc.com",
                 "logo": "images/simpleltc.png",
@@ -88,7 +110,7 @@
                 "start_dt": 2005,
                 "end_dt": 2006,
                 "position": "Developer / Technical Support",
-                "company": "Computer Techniques, Inc.",
+                "company": "Computer Techniques",
                 "location": "Taylorville, IL",
                 "website": "http://www.cticomputers.com",
                 "logo": "images/cti.png",
