@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Fira+Sans:700|Source+Code+Pro|Roboto);
+@import url(//fonts.googleapis.com/css?family=Fira+Sans:700|Source+Code+Pro|Roboto);
 
 .container {
     margin-top: 40px;
@@ -21,6 +21,10 @@ h1{
 
 .top-heading h1{
     margin-bottom: 0;
+}
+
+.profile-left{
+    margin-top: 20px;
 }
 
 img.profile-photo {
@@ -65,4 +69,34 @@ img.profile-photo {
     height: 20px;
     width: 20px;
     text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    body{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container{
+        margin-top:10px;
+        margin-bottom: 50px;
+    }
+
+    h1{
+        display: block;
+    }
+
+    .top-heading{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    #profiles{
+        margin: auto 20px   ;
+    }
+
+    #profiles .fa{
+        float: right;
+    }
 }
