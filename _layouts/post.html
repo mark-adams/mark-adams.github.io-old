@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ page.title }}</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+        <!-- Local stylesheet -->
+        <link rel="stylesheet" href="/css/post.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="col-md-offset-2 col-md-1">
+            <ul class="list-unstyled">
+                {% for item in site.data.menu %}
+                <li><a href="{{ item.link }}"><img src="{{ item.icon }}" title="{{ item.title }}" /></a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <div class="col-md-6">
+            <h1>{{ page.title }}</h1>
+            <div>
+                {{ content }}
+            </div>
+            <div id="post-nav" class="clearfix">
+                {% if page.previous.url %}
+                <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+                {% endif %}
+                {% if page.next.url %}
+                <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+                {% endif %}
+            </div>
+        </div>
+
+    </body>
+
+</html>
