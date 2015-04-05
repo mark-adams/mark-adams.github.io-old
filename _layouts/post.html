@@ -1,43 +1,71 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{{ page.title }}</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>{{ page.title }}</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-        <!-- Local stylesheet -->
-        <link rel="stylesheet" href="/css/post.css">
+		<!-- Fonts -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    </head>
-    <body>
-        <nav class="col-md-offset-2 col-md-1">
-            <ul class="list-unstyled">
-                {% for item in site.data.menu %}
-                <li><a href="{{ item.link }}"><img src="{{ item.icon }}" title="{{ item.title }}" /></a></li>
-                {% endfor %}
-            </ul>
-        </nav>
-        <div class="col-md-6">
-            <h1>{{ page.title }}</h1>
-            <div>
-                {{ content }}
+		<!-- Local stylesheet -->
+		<link rel="stylesheet" href="/css/base.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	</head>
+	<body class="with-navbar">
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6 navbar-row">
+                    <div class="navbar-header">
+                      <a class="navbar-brand" href="/index.html">
+                        <img alt="Brand" src="http://www.gravatar.com/avatar/968d5dfb184edf2642ef5fdc53055738?s=36">
+						<span>Mark Adams</span>
+                      </a>
+                    </div>
+                </div>
             </div>
-            <div id="post-nav" class="clearfix">
-                {% if page.previous.url %}
-                <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-                {% endif %}
-                {% if page.next.url %}
-                <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-                {% endif %}
+          </div>
+		</nav>
+		<div class="fluid-container">
+            <div class="col-md-offset-3 col-md-6">
+				<div>
+	                <h1>{{ page.title }}</h1>
+					<div class="post-date">Posted {{ page.date | date: "%Y-%m-%d" }}</div>
+				</div>
+                <div class="post-content">
+                    {{ content }}
+                </div>
+				<div id="post-nav" class="clearfix">
+					{% if page.previous.url %}
+					<a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+					{% endif %}
+					{% if page.next.url %}
+					<a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+					{% endif %}
+				</div>
+				<div id="post-comments" class="clearfix">
+					<div id="disqus_thread"></div>
+					<script type="text/javascript">
+					    /* * * CONFIGURATION VARIABLES * * */
+					    var disqus_shortname = 'markadams';
+
+					    /* * * DON'T EDIT BELOW THIS LINE * * */
+					    (function() {
+					        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+					        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					    })();
+					</script>
+				</div>
             </div>
-        </div>
-
-    </body>
-
+		</div>
+	</body>
 </html>

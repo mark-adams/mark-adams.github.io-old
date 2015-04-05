@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Fira+Sans:700|Source+Code+Pro|Roboto);
+@import url(//fonts.googleapis.com/css?family=Fira+Sans:700|Source+Code+Pro|Libre+Baskerville);
 
 .container {
     margin-top: 40px;
@@ -9,9 +9,13 @@
     font-weight: 700;
 }
 
-h1{
+.subtitle {
+    padding-left: 15px;
+}
+
+h1, h2, h3, h4, h5{
     font-family: 'Fira Sans', sans-serif;
-    display: inline-block;
+
 }
 
 .top-heading{
@@ -20,6 +24,7 @@ h1{
 }
 
 .top-heading h1{
+    display: inline-block;
     margin-bottom: 0;
 }
 
@@ -71,6 +76,44 @@ img.profile-photo {
     text-align: center;
 }
 
+.divider {
+    margin-top: 15px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+body.with-navbar { padding-top: 70px; }
+
+
+.navbar-brand{
+    padding: 5px 15px 0 15px;
+}
+
+.navbar-brand img {
+    border-radius: 100%;
+    display: inline-block;
+}
+
+.navbar-brand span{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Fira Sans', sans-serif;
+    padding-top: 4px;
+    padding-left: 10px;
+}
+
+.post-content{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.2em;
+    border-top: 1px solid #e2e2e2;
+    padding-top: 25px;
+    margin-top: 10px;
+}
+
+.post-date {
+    text-align: right;
+    font-family: 'Fira Sans', sans-serif;
+}
 
 @media (max-width: 768px) {
     body{
@@ -90,6 +133,11 @@ img.profile-photo {
     .top-heading{
         text-align: center;
         padding-bottom: 20px;
+    }
+
+    .subtitle{
+        display: block;
+        padding: 0;
     }
 
     #profiles{

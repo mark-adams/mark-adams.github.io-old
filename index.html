@@ -16,28 +16,16 @@
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 		<!-- Local stylesheet -->
-		<link rel="stylesheet" href="/css/home.css">
+		<link rel="stylesheet" href="/css/base.css">
 
 		<!-- Latest compiled and minified JavaScript -->
+		<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-
-		<script>
-			var blog_posts = [
-			{% for post in site.posts limit:30 %}
-				{'url': '{{ post.url }}', 'date': '{{ post.date | date: "%Y-%m-%d" }}', 'title': '{{post.title}}' },
-			{% endfor %}
-			];
-		</script>
 	</head>
 	<body>
 		<div class="container">
-			<div class="row">
-
-			<div class="row">
-
-			</div>
-			<div class="row">
-				<div class="col-xs-12 col-md-offset-3 col-md-2 profile-left">
+			<div class="row profile-info">
+				<div class="col-xs-12 col-md-offset-2 col-md-2 profile-left">
 					<img class="profile-photo center-block" src="http://www.gravatar.com/avatar/968d5dfb184edf2642ef5fdc53055738?s=150">
 					<div class="profile-caption text-center">
 						<div>
@@ -50,10 +38,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-xs-12 col-md-4">
+				<div class="col-xs-12 col-md-5">
 					<div class="top-heading">
 						<h1>Mark Adams</h1>
-						<span class="code">software developer</span>
+						<span class="code subtitle">software developer</span>
 					</div>
 					<div id="profiles">
 						{% for profile in site.data.profiles %}
@@ -66,31 +54,24 @@
 
 				</div>
 			</div>
-
-
-
-			<!--
-			<nav>
-				<ul>
-					{% for item in site.data.menu %}
-					<li><a href="{{ item.link }}"><img src="{{ item.icon }}" title="{{ item.title }}" /></a></li>
-					{% endfor %}
-				</ul>
-			</nav>
-			<div id="posts">
-				<h2>Recent posts...</h2>
-				<ul class="c">
-					{% for post in site.posts limit:5 %}
-					<li>
-						<a href="{{ post.url }}">{{ post.date | date: "%Y.%m.%d" }} .. {{ post.title }}</a>
-					</li>
-					{% endfor %}
-				</ul>
+			<div class="row">
+				<div class="col-md-offset-2 col-md-7 divider"></div>
 			</div>
-			-->
-
-
+			<div id="posts" class="row">
+				<div class="col-md-offset-2 col-md-7">
+					<h2>Recent blog posts</h2>
+					{% if site.posts.size == 0 %}
+						<p>No blog posts yet!</p>
+					{% endif %}
+					<ul>
+						{% for post in site.posts limit:15 %}
+						<li>
+							<a href="{{ post.url }}">{{ post.date | date: "%Y.%m.%d" }} .. {{ post.title }}</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
 		</div>
-
 	</body>
 </html>
