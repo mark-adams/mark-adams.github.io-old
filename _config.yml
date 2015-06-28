@@ -1,0 +1,47 @@
+# Site wide configuration
+
+title:            Mark Adams
+locale:           en_US
+url: 
+
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+
+# Site owner
+owner:
+  name: Mark Adams
+  avatar: http://www.gravatar.com/avatar/968d5dfb184edf2642ef5fdc53055738?s=150
+  bio: "I write code for [Atlassian](http://www.atlassian.com). Married to [Katie](http://twitter.com/bluejaykate)"
+  email:
+  twitter: markadams
+  google:
+    plus: MarkAdams87
+    analytics: UA-3669608-3
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  bitbucket: markadams
+  github: mark-adams
+  keybase: kramsmada
+  linkedin: markladams
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
