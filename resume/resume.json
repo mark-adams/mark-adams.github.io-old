@@ -40,15 +40,21 @@
                 "description": "Worked on the Bitbucket team helping to build, optimize, and test new features and systems.",
                 "projects":
                 [
+                    "Worked on a small team developing and launching the new webhooks backend service",
+                    "Helped lead the effort to build and deploy a new SSH stack in Go",
+                    "Lead the engineering effort to integrate the company's identity platform ",
+                    "Worked to develop and improve the team's tooling and CI processes increase dev speed"
                 ],
                 "technologies":
                 [
                     {"name": "Python", "tag": "python"},
+                    {"name": "Go", "tag": "go"},
                     {"name": "Django", "tag": "django"},
                     {"name": "Celery", "tag": "celery"},
                     {"name": "Git", "tag": "git"},
                     {"name": "Testing", "tag": "testing"},
-                    {"name": "PostgreSQL", "tag": "postgres"}
+                    {"name": "PostgreSQL", "tag": "postgres"},
+                    {"name": "DynamoDB", "tag": "dynamodb"}
                 ]
             },
             {
